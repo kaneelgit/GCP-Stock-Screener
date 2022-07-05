@@ -1,0 +1,1 @@
+ticker, date, num_mentions, sentiment_t_nltk, sentiment_d_nltk, sentiment_td_nltk, stockprice_n, stockprice_n1, stockprice_n2, stockprice_n3
