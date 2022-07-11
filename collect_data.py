@@ -19,4 +19,7 @@ sid = SentimentIntensityAnalyzer()
 tickers = pd.read_csv('data/tickers.csv')
 
 #get main dataframe
+main_df = pd.read_csv('data/main_dataframe.csv').set_index('Ticker')
 
+#get setimentIntensityAnalyzer
+sid = SentimentIntensityAnalyzer()
