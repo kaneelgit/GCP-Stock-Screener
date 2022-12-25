@@ -1,4 +1,3 @@
-# Reddit
+# Creating a Stock Screener on Google Cloud Platform
 
-This repository is used to understand relationships between reddit and stock market bets.
-
+This repository creates a 
