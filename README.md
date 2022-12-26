@@ -1,3 +1,3 @@
 # Creating a Stock Screener on Google Cloud Platform
 
-![Stock Screener Flowchart](https://user-images.githubusercontent.com/85404022/209481534-d481f742-1179-4cb1-b69e-28a9d8e2ce6d.png)
+![Stock Screener Flowchart](https://user-images.githubusercontent.com/85404022/209564600-7df46cb3-1ae8-4f63-b258-aa57bcf9261a.png)
