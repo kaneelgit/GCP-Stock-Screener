@@ -1,0 +1,9 @@
+flask
+numpy 
+pandas
+gunicorn
+praw
+yfinance
+matplotlib
+nltk
+google-cloud-storage
