@@ -42,8 +42,8 @@ def run_process():
     upload_pdf = f'watchlist_{td_str}.pdf'
 
     #upload files
-    csv_bucket = storage_client.get_bucket('csv_output_bucket') #add csv bucket name here
-    pdf_bucket = storage_client.get_bucket('pdf_output_bucket') #add the pdf bucket name here
+    csv_bucket = storage_client.get_bucket('screener_csv_bucket') #add csv bucket name here
+    pdf_bucket = storage_client.get_bucket('screener_pdf_bucket') #add the pdf bucket name here
 
     #upload csv file
     csv_blob = csv_bucket.blob(upload_csv)
@@ -61,49 +61,17 @@ app = Flask(__name__)
 
 @app.route("/", methods=["POST"])
 def main():
-    envelope = request.get_json()
-    if not envelope:
-        msg = "no Pub/Sub message received"
-        print(f"error: {msg}")
-        return f"Bad Request: {msg}", 400
+    if request.method == 'POST':
 
-    if not isinstance(envelope, dict) or "message" not in envelope:
-        msg = "invalid Pub/Sub message format"
-        print(f"error: {msg}")
-        return f"Bad Request: {msg}", 400
+        run_process()
+        
+        return ("", 204)
 
-    # Decode the Pub/Sub message.
-    pubsub_message = envelope["message"]
+    else:
 
-    if isinstance(pubsub_message, dict) and "data" in pubsub_message:
-        try:
-            data = json.loads(base64.b64decode(pubsub_message["data"]).decode())
+        return ("", 400)
 
-        except Exception as e:
-            msg = (
-                "Invalid Pub/Sub message: "
-                "data property is not valid base64 encoded JSON"
-            )
-            print(f"error: {e}")
-            return f"Bad Request: {msg}", 400
 
-        # Validate the message is a Cloud Storage event.
-        if not data["name"] or not data["bucket"]:
-            msg = (
-                "Invalid Cloud Storage notification: "
-                "expected name and bucket properties"
-            )
-            print(f"error: {msg}")
-            return f"Bad Request: {msg}", 400
 
-        try:
-            print('worked up to here')
-            run_process()
-            return ("", 204)
 
-        except Exception as e:
-            print(f"error: {e}")
-            return ("", 500)
-
-    return ("", 500)
 
