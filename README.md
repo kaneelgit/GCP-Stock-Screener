@@ -56,9 +56,34 @@ user_id = ""
 
 ## Run Code
 
+Clone the repository.
+```
+git clone https://github.com/kaneelgit/GCP-Stock-Screener.git
+```
+Change the working directory to terraform
+```
+cd terraform
+```
+Initialize terraform
+```
+terraform init
+```
+View the plan
+```
+terraform plan
+```
+Apply the changes to GCP
+```
+terraform apply
+```
 
 ## Destroy Infrastructure
 
-
+You can completely destroy the infrastructure from GCP using the following code snippet.
+```
+terraform destroy
+```
 
 ## Other details
+
+- Please submit an issue if you find any bugs or issues.
