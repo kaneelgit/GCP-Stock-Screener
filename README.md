@@ -6,9 +6,9 @@ This repository has code to deploy a stock screening app to Google Cloud Platfor
 
 The diagram below shows the GCP infrastructure created by the code. We use the Gcloud scheduler api to run the code deployed to Google Cloud Run everyday at 10.30pm. The results are then daily saved in storage buckets. 
 
-<a href = "https://cloud.google.com/run">Google Cloud Run</a>, <a href = "https://cloud.google.com/scheduler">Google Cloud Scheduler</a>, <a href = "https://cloud.google.com/container-registry>Google Cloud Container Registry</a>, <a href = "https://cloud.google.com/storage">Google Cloud Storage</a> are the billable resources used in this project. 
-
 ![Stock Screener Flowchart](https://user-images.githubusercontent.com/85404022/210032756-842df8c5-57eb-41d7-a5a3-736ca7247e49.png)
+
+<a href="https://cloud.google.com/run">Google Cloud Run</a>, <a href="https://cloud.google.com/scheduler">Google Cloud Scheduler</a>, <a href = "https://cloud.google.com/container-registry">Google Cloud Container Registry</a>, <a href = "https://cloud.google.com/storage">Google Cloud Storage</a> are the billable resources used in this project. 
 
 ## Output
 
