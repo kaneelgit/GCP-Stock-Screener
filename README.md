@@ -18,7 +18,7 @@ Below is an example page from the PDF created by the infrastructure. The resulti
 
 ## Setup & Requirements
 
-In order to setup and run the code, you will need a billing enabled Google Cloud Platform (GCP) account. You will also need to have GCP command line interface (CLI) properly, terraform and docker properly setup in your local environment. The following are some useful resources on how to setup a Google Cloud account and install the above mentioned software locally. Additionally, you will also need a Reddit API key to access reddit.
+In order to setup and run the code, you will need a billing enabled Google Cloud Platform (GCP) account. You will also need to have GCP command line interface (CLI), terraform and docker properly setup in your local environment. The following are some useful resources on how to setup a Google Cloud account and install the above mentioned software locally. Additionally, you will also need a Reddit API key to access reddit.
 
 1. <a href = "#">Google Cloud Platform</a>
 2. <a href = "https://cloud.google.com/sdk/docs/install">Gcloud CLI</a>
@@ -26,8 +26,32 @@ In order to setup and run the code, you will need a billing enabled Google Cloud
 4. <a href = "https://docs.docker.com/get-docker/">Docker</a>
 5. <a href = "https://www.reddit.com/wiki/api/">Reddit API</a>
 
+## Adding Credentials
 
+### Google Cloud Credentials.
 
+You will need to add the Google Cloud credentials in the terraform/variables.tf file. 
+
+```
+variable "billing_account_name" {
+    default = "" #enter billing account name here
+}
+
+variable "user" {
+    default = "" #enter user email address here
+}
+
+```
+
+### Reddit Credentials
+
+Locate the screener_app/utils/credentials.py to add your reddit credentials.
+
+```
+client_id = ""
+secret = ""
+user_id = "" 
+```
 
 
 ## Run Code
