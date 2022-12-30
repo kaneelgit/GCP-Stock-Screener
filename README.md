@@ -8,8 +8,30 @@ The diagram below shows the GCP infrastructure created by the code. We use the G
 
 ![Stock Screener Flowchart](https://user-images.githubusercontent.com/85404022/210032756-842df8c5-57eb-41d7-a5a3-736ca7247e49.png)
 
-## Resulting Summary
+## Output
 
 Below is an example page from the PDF created by the infrastructure. The resulting PDF contains the top 3 mentioned stocks in reddit and shows the sentiment, analyst recommendations, put/call ratio etc.
 
 ![Capture](https://user-images.githubusercontent.com/85404022/210092435-cc15b69a-94c1-4e21-abb7-e410128de49d.PNG)
+
+## Setup & Requirements
+
+In order to setup and run the code, you will need a billing enabled Google Cloud Platform (GCP) account. You will also need to have GCP command line interface (CLI) properly, terraform and docker properly setup in your local environment. The following are some useful resources on how to setup a Google Cloud account and install the above mentioned software locally.
+
+1. <a href = "#">Google Cloud Platform</a>
+2. <a href = "https://cloud.google.com/sdk/docs/install">Gcloud CLI</a>
+3. <a href = "https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli">Terraform</a>
+4. <a href = "https://docs.docker.com/get-docker/">Docker</a>
+
+
+
+
+
+## Run Code
+
+
+## Destroy Infrastructure
+
+
+
+## Other details
